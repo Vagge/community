@@ -1,0 +1,19 @@
+﻿@model Community.Models.CommunityUserViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div>
+    <label>
+        @Html.DisplayNameFor(model => model.lastLoggedIn)
+        @Html.DisplayFor(model => model.lastLoggedIn)
+    </label>
+    </br>
+    <label>
+        @Html.DisplayNameFor(model => model.messagesUnread)
+        @Html.DisplayFor(model => model.messagesUnread)
+    </label>
+</div>

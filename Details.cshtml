@@ -1,0 +1,53 @@
+﻿@model Community.Models.MessageViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Message</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sender)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sender)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Reciever)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Reciever)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.text)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.text)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TimeSent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TimeSent)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Read)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Read)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

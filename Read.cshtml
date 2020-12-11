@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    var senders = ViewData["senders"] as List<string>;
+    var totalNrOfMessages = ViewData["totalNrOfMessages"];
+    var totalNrOfRead = ViewData["totalNrOfRead"];
+    var totalNrOfDeleted = ViewData["totalNrOfDeleted"];
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Senders
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in senders)
+        {
+            <tr>
+                <td>
+                    @item
+                </td>
+                <td>
+                    <a asp-action="MessagesFrom" asp-route-id="@item">Read</a> |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <label>
+        Total messages: @totalNrOfMessages
+    </label>
+    <label>
+       Total read: @totalNrOfRead
+    </label>
+    <label>
+        Total deleted: @totalNrOfDeleted
+    </label>
+</div>
+
+
+
